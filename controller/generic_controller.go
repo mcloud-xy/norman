@@ -92,9 +92,10 @@ func NewGenericController(name string, genericClient Backend) GenericController 
 				// If ResourceVersion is set to 0 then the Limit is ignored on the API side. Usually
 				// that's not a problem, but with very large counts of a single object type the client will
 				// hit it's connection timeout
-				if options.ResourceVersion == "0" {
-					options.ResourceVersion = ""
-				}
+				//if options.ResourceVersion == "0" {
+				//	options.ResourceVersion = ""
+				//}
+				options.ResourceVersion = ""
 				return genericClient.List(options)
 			},
 			WatchFunc: genericClient.Watch,
