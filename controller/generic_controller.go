@@ -95,7 +95,7 @@ func NewGenericController(name string, genericClient Backend) GenericController 
 				//if options.ResourceVersion == "0" {
 				//	options.ResourceVersion = ""
 				//}
-				//options.ResourceVersion = ""
+				options.ResourceVersion = "0"
 				return genericClient.List(options)
 			},
 			WatchFunc: genericClient.Watch,
