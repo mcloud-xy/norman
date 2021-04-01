@@ -18,6 +18,9 @@ type Collection struct {
 type GenericCollection struct {
 	Collection
 	Data []interface{} `json:"data"`
+
+	Code    string `json:"code,omitempty"`
+	Message string `json:"message,omitempty"`
 }
 
 type ResourceCollection struct {
