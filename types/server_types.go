@@ -20,6 +20,9 @@ type RawResource struct {
 	Values       map[string]interface{} `json:",inline" yaml:",inline"`
 	ActionLinks  bool                   `json:"-" yaml:"-"`
 	DropReadOnly bool                   `json:"-" yaml:"-"`
+
+	Code    string `json:"code"`
+	Message string `json:"message"`
 }
 
 func (r *RawResource) AddAction(apiContext *APIContext, name string) {
